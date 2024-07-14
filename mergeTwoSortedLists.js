@@ -12,4 +12,11 @@
 // Input: list1 = [1,2,4], list2 = [1,3,4]
 // Output: [1,1,2,3,4,4]
 
-const mergeTwoLists = (l1, l2) => {};
+const mergeTwoLists = (l1, l2) => {
+    let mergedList = l1.concat(l2).sort((a, b) => a - b);
+    return mergedList;
+};
+
+console.log(mergeTwoLists([1,2,4], [1,3,4])); //[1,1,2,3,4,4]
+console.log(mergeTwoLists([], [])); //[]
+console.log(mergeTwoLists([], [0])); //[0]
