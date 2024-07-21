@@ -22,4 +22,11 @@
 // Output: 6
 // Explanation: The last word is "joyboy" with length 6.
 
-const lengthOfLastWord = (s) => {};
+const lengthOfLastWord = (s) => {
+    let words = s.trim().split(' ');
+    return words[words.length - 1].length;
+};
+
+console.log(lengthOfLastWord("Hello World")); //5
+console.log(lengthOfLastWord("   fly me   to   the moon  ")); //4
+console.log(lengthOfLastWord("luffy is still joyboy")); //6
